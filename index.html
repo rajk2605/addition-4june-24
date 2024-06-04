@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title> Addition App By Raj </title>
+	<style> *{font-size:40px;font-family:Times new roman}
+	body{background-color:azure;}
+	</style>
+</head>
+
+<body>
+<center>
+	<h1> Addition App </h1>
+	<form onsubmit ="add()">
+	<input type="number" step="any" id="num1" placeholder="Enter First Number">
+	<br><br>
+	<input type="number" step="any" id="num2" placeholder="Enter Second Number">
+	<br><br>
+	<input type="submit" value="Add" />
+	</form>
+	<h2 id="msg"/>
+
+	<script>
+		function add()
+		{
+		event.preventDefault();
+		let num1 = document.getElementById("num1");
+		let num2 = document.getElementById("num2");
+		let msg = document.getElementById("msg");
+
+		if (num1.value == "")
+		{
+			alert("Please Enter First Number");
+			msg.innerHTML ="";
+			num1.focus();
+			return;
+		}
+
+		if (num2.value == "")
+		{
+			alert("Please Enter Second Number");
+			msg.innerHTML ="";
+			num2.focus();
+			return;
+		}
+
+		let n1 = parseFloat(num1.value);
+		let n2 = parseFloat(num2.value);
+		let res = n1 + n2;
+		let ans = "Addn = " + res.toFixed(3);
+		msg.innerHTML = ans;
+
+		}
+
+	</script>
+
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
